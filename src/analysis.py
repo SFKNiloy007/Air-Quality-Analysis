@@ -2,11 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('updated_pollution_dataset.csv')  
-df.head()
-df.info() 
-df.describe()  
-df.isnull().sum()
+df = pd.read_csv('updated_pollution_dataset.csv')
+
+print(df.head())
+print(df.info())
+print(df.isnull().sum())
+print(df.describe())
 
 air_quality_counts = df['Air Quality'].value_counts()
 air_quality_percentage = df['Air Quality'].value_counts(normalize=True) * 100
@@ -14,9 +15,16 @@ air_quality_percentage = df['Air Quality'].value_counts(normalize=True) * 100
 print(air_quality_counts)
 print(air_quality_percentage)
 
+threshold = 0.2
+is_balanced = all(air_quality_percentage > threshold)
+
+if is_balanced:
+    print("\n✅ The dataset appears balanced.")
+else:
+    print("\n⚠️ The dataset is imbalanced.")
+
 numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
-df[numeric_columns].describe()
-df['Air Quality'].value_counts()
+print(df[numeric_columns].describe())
 
 fig, axes = plt.subplots(2, 2, figsize=(16, 10))
 
