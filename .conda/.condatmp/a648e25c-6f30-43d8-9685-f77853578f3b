@@ -1,0 +1,13 @@
+prefix=h:/Air Quality Analysis Project/.conda/Library
+exec_prefix=h:/Air Quality Analysis Project/.conda/Library
+libdir=h:/Air Quality Analysis Project/.conda/Library/lib
+sharedlibdir=h:/Air Quality Analysis Project/.conda/Library/lib
+includedir=h:/Air Quality Analysis Project/.conda/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
