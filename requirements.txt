@@ -1,0 +1,30 @@
+Air Pollution Data Analysis Requirements
+Software Needs
+Python 3.x
+
+Libraries: pandas, matplotlib, seaborn
+
+Key Functions
+Load and explore 'updated_pollution_dataset.csv'
+
+Show summary statistics and missing values
+
+Analyze air quality counts and percentages
+
+Extract numerical data and display stats
+
+Create bar, pie, and line plots
+
+Generate a correlation heatmap
+
+Constraints
+The dataset must include Air Quality and Temperature columns
+
+Required libraries must be installed
+
+Expected Output
+Statistical summaries and missing value counts
+
+Air quality distribution data
+
+Multiple visualizations (bar, pie, line plots, heatmap)
